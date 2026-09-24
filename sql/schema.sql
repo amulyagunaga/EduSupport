@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS tickets (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     due_at TIMESTAMP,
     resolved_at TIMESTAMP,
+    closed_at TIMESTAMP,
     FOREIGN KEY(student_id) REFERENCES users(id),
     FOREIGN KEY(assigned_to) REFERENCES users(id)
 );
